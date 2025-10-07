@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Shobhita ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-btn.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-in;
+            min-height: 400px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page {
+            display: none;
+            animation: slideIn 0.5s ease-in;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h1 {
+            color: #764ba2;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            animation: heartbeat 2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10% { transform: scale(1.05); }
+            20% { transform: scale(1); }
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .content {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .hearts {
+            text-align: center;
+            font-size: 2em;
+            margin: 30px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .memory-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #764ba2;
+        }
+
+        .promise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .promise-list li {
+            margin: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        .promise-list li:before {
+            content: "💜";
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+
+        .hindi-text {
+            font-style: italic;
+            color: #764ba2;
+            font-size: 1.15em;
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(118, 75, 162, 0.1);
+            border-radius: 10px;
+        }
+
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 40px;
+            color: #764ba2;
+            font-size: 1.2em;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            margin: 30px 0;
+            padding-left: 50px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: "❤️";
+            position: absolute;
+            left: 0;
+            font-size: 2em;
+        }
+
+        .reason-box {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-size: 1.05em;
+        }
+
+        .response-section {
+            margin: 25px 0;
+        }
+
+        .response-section label {
+            display: block;
+            color: #764ba2;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .response-section textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #764ba2;
+            border-radius: 10px;
+            font-family: 'Georgia', serif;
+            font-size: 1em;
+            resize: vertical;
+        }
+
+        .response-section textarea:focus {
+            outline: none;
+            border-color: #f5576c;
+            box-shadow: 0 0 10px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-save {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .saved-message {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .instruction-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar"></div>
+
+    <div class="container">
+        <!-- Page 1: Home -->
+        <div class="page active" id="page1">
+            <h1>Shobhita ❤️</h1>
+            <div class="hearts">💕 Meri Jaan 💕</div>
+            <div class="content">
+                <p>Shobhita, yeh website maine sirf tumhare liye banaya hai. I know you think maine tumhare saath timepass kiya, but that's not true. Meri feelings genuine hain.</p>
+                
+                <div class="hindi-text">
+                    "Tum mere liye khaas ho, aur main nahi chahta ki yeh misunderstanding hamare beech rahe."
+                </div>
+
+                <p>Please, in pages ko padhna. Har page mein maine apne dil ki baat rakhi hai. I'm not making big claims, bas jo main feel karta hoon woh share karna chahta hoon.</p>
+
+                <div class="memory-card">
+                    <h2>Yeh Website Kyun?</h2>
+                    <p>Kyunki main tumhe samjhana chahta hoon ki tum mere liye important ho. Agar maine tumhe galat feel karaya, toh I'm sorry. But please understand ki timepass nahi tha yeh mere liye.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Meri Feelings -->
+        <div class="page" id="page2">
+            <h1>Meri Feelings 💖</h1>
+            <div class="content">
+                <p>Shobhita, jab se tumhe jaana hai, mujhe tumhare saath time spend karna acha lagta hai. Tum sirf girlfriend nahi ho, tum ek special person ho mere liye.</p>
+
+                <div class="hindi-text">
+                    "Tumhare saath baat karke accha lagta hai, tumhari smile dekhkar din acha lagta hai."
+                </div>
+
+                <div class="memory-card">
+                    <h2>What You Mean to Me</h2>
+                    <p>You're not timepass, Shobhita. Tum meri life mein important ho. Maine kabhi kisi ke saath aisa feel nahi kiya jo tumhare saath karta hoon.</p>
+                </div>
+
+                <p>Jab main subah uthta hoon, tumhara khayaal aata hai. Jab kuch acha hota hai, tumhe batana chahta hoon. Jab kuch bura hota hai, tumse baat karna chahta hoon. Yeh simple feelings hain but genuine hain.</p>
+
+                <p>I understand ki maine tumhe secure feel nahi karaya. But please, don't doubt my feelings. They're real.</p>
+            </div>
+        </div>
+
+        <!-- Page 3: Our Memories -->
+        <div class="page" id="page3">
+            <h1>Hamare Moments 🌟</h1>
+            <div class="content">
+                <p>Har woh moment jo humne saath bitaya hai, woh mere liye special hai.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Pehli Baar Jab Mile</h3>
+                        <p>Remember jab humne pehli baar baat ki thi? Us din se kuch alag sa lagne laga. You made an impression.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Hamare Conversations</h3>
+                        <p>Tumhare saath baat karna easy hai. Kabhi bore nahi hote. Har story, har joke - sab achha lagta hai.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Jab Tum Hasti Ho</h3>
+                        <p>Tumhari hassi sunkar achha lagta hai. Tumhe khush dekhna, that matters to me.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Simple Moments</h3>
+                        <p>Woh simple moments bhi yaad rehte hain - casual talks, sharing things, just being comfortable with each other.</p>
+                    </div>
+                </div>
+
+                <div class="hindi-text">
+                    "Yeh chhoti chhoti baatein yaad rehti hain kyunki tumhare saath woh special ban jaati hain."
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4: Why I Care -->
+        <div class="page" id="page4">
+            <h1>Kyun Ho Tum Special 💕</h1>
+            <div class="content">
+                <p>Kuch reasons hain jo tumhe special banate hain mere liye:</p>
+
+                <div class="reason-box">
+                    <strong>1. Tumhari Smile</strong><br>
+                    Tumhari smile genuine hai. Jab tum hasti ho, woh real lagta hai aur achha lagta hai.
+                </div>
+
+                <div class="reason-box">
+                    <strong>2. Easy to Talk To</strong><br>
+                    Tumhare saath khud ko express karna easy hai. Comfortable feel hota hai tumhare saath.
+                </div>
+
+                <div class="reason-box">
+                    <strong>3. Understanding Nature</strong><br>
+                    Tum samajhne ki koshish karti ho. Yeh quality har kisi mein nahi hoti.
+                </div>
+
+                <div class="reason-box">
+                    <strong>4. The Way You Are</strong><br>
+                    Tum natural ho, real ho. Fake nahi ho. And that's refreshing.
+                </div>
+
+                <div class="reason-box">
+                    <strong>5. How I Feel Around You</strong><br>
+                    Tumhare saath peace milti hai. Comfortable, happy - yeh feelings genuine hain.
+                </div>
+
+                <div class="hindi-text">
+                    "Yeh sab simple cheezein hain but yahi sab tumhe special banata hai."
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5: What I'll Do -->
+        <div class="page" id="page5">
+            <h1>Kya Kar Sakta Hoon 🤝</h1>
+            <div class="content">
+                <p>Shobhita, maine galtiyan ki hain. But main kuch changes la sakta hoon:</p>
+
+                <ul class="promise-list">
+                    <li><strong>More Honest Rahunga:</strong> Koi cheez chupane ki zarurat nahi. Open communication rakhenge.</li>
+                    
+                    <li><strong>Time Dunga:</strong> Proper time dunga tumhe. Show karunga ki tum important ho.</li>
+                    
+                    <li><strong>Better Communication:</strong> Agar kuch problem hai, toh baat karenge. Misunderstandings avoid karenge.</li>
+                    
+                    <li><strong>Respect Tumhari Feelings:</strong> Tumhara perspective samjhunga. Tumhari feelings matter karti hain.</li>
+                    
+                    <li><strong>Actions Speak:</strong> Words se zyada, mere actions se dikhega ki main serious hoon.</li>
+                </ul>
+
+                <div class="hindi-text">
+                    "Yeh realistic goals hain jo main follow kar sakta hoon. Bade bade promises nahi, simple commitments."
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6: I'm Sorry -->
+        <div class="page" id="page6">
+            <h1>I'm Sorry 😔</h1>
+            <div class="content">
+                <p>Shobhita, I'm sorry for making you feel like you're not important. Sorry for creating doubts in your mind.</p>
+
+                <div class="memory-card">
+                    <h2>Meri Galtiyan</h2>
+                    <p>Maine tumhe secure feel nahi karaya. Maine apne actions se galat message diya. Maine wo attention nahi di jo deni chahiye thi. I accept this.</p>
+                </div>
+
+                <p>"Sorry" kaafi nahi hai, I know. But I want you to know ki main apni galtiyan accept karta hoon aur unse seekhna chahta hoon.</p>
+
+                <div class="hindi-text">
+                    "Agar tumhe laga ki yeh timepass tha, toh that was never my intention. Tum actually important ho."
+                </div>
+
+                <p>I'm not asking you to forget everything. Take your time. But I wanted to apologize properly and explain my side.</p>
+            </div>
+        </div>
+
+        <!-- Page 7: Missing You -->
+        <div class="page" id="page7">
+            <h1>Tumhari Kami 💔</h1>
+            <div class="content">
+                <p>Shobhita, jab se properly baat nahi hui, I've realized kitna miss kar raha hoon.</p>
+
+                <div class="memory-card">
+                    <h2>What I Miss</h2>
+                    <p>Tumhare messages, tumse baat karna, tumhare saath hasna - yeh sab miss ho raha hai. It feels different without you.</p>
+                </div>
+
+                <p>Jab kuch share karna hota hai, toh tumhara khayaal aata hai. Tumhare saath share karna, that was nice.</p>
+
+                <div class="hindi-text">
+                    "Tumhari kami mehsoos ho rahi hai. Tumhare bina normal nahi lag raha."
+                </div>
+
+                <p>Main nahi chahta ki humari baat yun hi khatam ho jaaye. Jo bhi tha hamare beech, woh meaningful tha for me.</p>
+            </div>
+        </div>
+
+        <!-- Page 8: Understanding -->
+        <div class="page" id="page8">
+            <h1>Jo Samajhna Hai 💭</h1>
+            <div class="content">
+                <p>Main kuch cheezein clear karna chahta hoon:</p>
+
+                <div class="memory-card">
+                    <h2>1. Timepass Nahi Tha</h2>
+                    <p>Yeh timepass nahi tha mere liye. I genuinely enjoyed our time together and cared about you. Agar aisa laga, toh that's a misunderstanding I want to clear.</p>
+                </div>
+
+                <div class="memory-card">
+                    <h2>2. Meri Galti</h2>
+                    <p>Agar maine tumhe valued feel nahi karaya, that's on me. I should have been more attentive, more present.</p>
+                </div>
+
+                <div class="memory-card">
+                    <h2>3. I Care</h2>
+                    <p>I do care about you. Maybe I didn't show it properly, but the feeling is there.</p>
+                </div>
+
+                <div class="memory-card">
+                    <h2>4. Open to Talk</h2>
+                    <p>Main ready hoon baat karne ke liye. Jo bhi misunderstanding hai, let's clear it. Communication mein hi solution hai.</p>
+                </div>
+
+                <div class="hindi-text">
+                    "Main perfect nahi hoon, galtiyan ki hain. But my intentions were never bad."
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 9: Let's Talk -->
+        <div class="page" id="page9">
+            <h1>Baat Karte Hain 💬</h1>
+            <div class="content">
+                <p>Shobhita, I think we need to talk properly. Yeh misunderstanding clear honi chahiye.</p>
+
+                <div class="memory-card">
+                    <h2>Meri Request</h2>
+                    <p>Let's sit and talk about what went wrong. Tumhari side bhi sunn-na chahta hoon. Maybe there are things I don't know or didn't understand.</p>
+                </div>
+
+                <p>Main defend nahi karunga blindly. Main genuinely samajhna chahta hoon ki kahan gadbad hui. Tumhara perspective important hai.</p>
+
+                <div class="hindi-text">
+                    "Baat karne se hi cheezein clear hoti hain. Assumptions se kuch nahi hoga."
+                </div>
+
+                <p>If you're willing, let's have an honest conversation. No drama, no arguments - just understanding each other better.</p>
+
+                <ul class="promise-list">
+                    <li>Main properly sunn-unga without interrupting</li>
+                    <li>Tumhari feelings ko understand karne ki koshish karunga</li>
+                    <li>Honest rahunga apni side se bhi</li>
+                    <li>Whatever you decide, I'll respect it</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Page 10: Final Words -->
+        <div class="page" id="page10">
+            <h1>Last Words 🙏</h1>
+            <div class="content">
+                <p>Shobhita, yeh website banake I wanted to express what I feel. It's not about making tall claims - it's just about being honest.</p>
+
+                <div class="memory-card">
+                    <h2>Bas Yeh Kehna Hai</h2>
+                    <p>Tum important ho mere liye. Yeh timepass nahi tha. Agar mistakes hui hain, main sorry hoon. And I'm open to talking and understanding what went wrong.</p>
+                </div>
+
+                <p>I'm not asking for immediate forgiveness or anything dramatic. Bas ek proper conversation ho, that's all.</p>
+
+                <div class="hindi-text">
+                    "Whatever happens, I wanted you to know the truth - ki tum mere liye matter karti ho."
+                </div>
+
+                <p>Take your time. Think about it. And whenever you're ready, let's talk. No pressure.</p>
+
+                <div class="hearts">💕 💖 💕</div>
+
+                <div class="signature">
+                    Tumhara,<br>
+                    Someone who genuinely cares<br>
+                    ❤️
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 11: Shobhita's Response -->
+        <div class="page" id="page11">
+            <h1>Shobhita - Tumhara Response 💬</h1>
+            <div class="content">
+                <p>Hi Shobhita, yeh page sirf tumhare liye hai. Yahan tum apne thoughts, questions, aur jo bhi kehna chahti ho, likh sakti ho.</p>
+
+                <div class="instruction-box">
+                    <h2>Kaise Use Kare:</h2>
+                    <p>📝 Neeche diye boxes mein apne thoughts likh do<br>
+                    💾 "Save My Response" button dabao<br>
+                    📱 Tumhara response save ho jayega (sirf tumhare device pe)<br>
+                    💭 Baad mein wapas aake dekh sakti ho jo tumne likha hai</p>
+                </div>
+
+                <div class="response-section">
+                    <label>1. Tumhare Questions/Doubts (Jo bhi puchhna hai):</label>
+                    <textarea id="questions" placeholder="Apne saare questions yahan likh do... koi bhi doubt ho, confusion ho..."></textarea>
+                </div>
+
+                <div class="response-section">
+                    <label>2. Tumhari Feelings (Honestly jo feel kar rahi ho):</label>
+                    <textarea id="feelings" placeholder="Tumhare dil mein kya hai? Honestly express karo..."></textarea>
+                </div>
+
+                <div class="response-section">
+                    <label>3. Kya Change Chahiye (Jo improve hona chahiye):</label>
+                    <textarea id="changes" placeholder="Kya changes chahti ho? Kya expect karti ho?"></textarea>
+                </div>
+
+                <div class="response-section">
+                    <label>4. Aage Kya (Tumhara decision/thoughts):</label>
+                    <textarea id="decision" placeholder="Tum kya sochti ho aage ke baare mein? Kya chahti ho?"></textarea>
+                </div>
+
+                <button class="btn-save" onclick="saveResponse()">💾 Save My Response</button>
+                
+                <div class="saved-message" id="savedMsg">
+                    ✅ Tumhara response save ho gaya hai! Isko screenshot leke ya copy karke share kar sakti ho.
+                </div>
+
+                <div class="hindi-text" style="margin-top: 30px;">
+                    "Tumhari har baat important hai. Honestly express karo, koi judgment nahi hai."
+                </div>
+
+                <div class="memory-card" style="margin-top: 30px;">
+                    <h2>Note:</h2>
+                    <p><strong>Privacy:</strong> Jo bhi tum yahan likhogi, woh sirf tumhare device pe save hoga. Automatically kisi ko nahi jayega.<br><br>
+                    <strong>Share kaise kare:</strong> Tumhara response save hone ke baad, tum screenshot le sakti ho ya text copy karke message kar sakti ho.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pages = {
+            'Home': 'page1',
+            'Meri Feelings': 'page2',
+            'Our Moments': 'page3',
+            'Why Special': 'page4',
+            'What I Can Do': 'page5',
+            'I\'m Sorry': 'page6',
+            'Missing You': 'page7',
+            'Understanding': 'page8',
+            'Let\'s Talk': 'page9',
+            'Final Words': 'page10',
+            '💬 Your Response': 'page11'
+        };
+
+        const navbar = document.getElementById('navbar');
+        
+        Object.keys(pages).forEach((name, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'nav-btn';
+            btn.textContent = name;
+            if (index === 0) btn.classList.add('active');
+            
+            btn.onclick = () => {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                
+                document.getElementById(pages[name]).classList.add('active');
+                btn.classList.add('active');
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            
+            navbar.appendChild(btn);
+        });
+
+        function saveResponse() {
+            var questions = document.getElementById('questions').value;
+            var feelings = document.getElementById('feelings').value;
+            var changes = document.getElementById('changes').value;
+            var decision = document.getElementById('decision').value;
+
+            if (!questions && !feelings && !changes && !decision) {
+                alert('Please write something before saving!');
+                return;
+            }
+
+            document.getElementById('savedMsg').style.display = 'block';
+            
+            setTimeout(function() {
+                document.getElementById('savedMsg').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
